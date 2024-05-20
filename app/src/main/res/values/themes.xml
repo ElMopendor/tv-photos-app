@@ -1,0 +1,4 @@
+<resources>
+
+    <style name="Theme.TvPhotosApp" parent="Theme.AppCompat.DayNight.NoActionBar" />
+</resources>

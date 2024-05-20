@@ -1,3 +1,5 @@
+import java.util.Properties
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
@@ -20,6 +22,25 @@ android {
             useSupportLibrary = true
         }
 
+        val file = project.rootProject.file("dev.properties")
+        val properties = Properties()
+        properties.load(file.inputStream())
+
+        //return empty key in case something goes wrong
+        val clientKey = properties.getProperty("CLIENT_ID") ?: ""
+        val baseUrl = properties.getProperty("BASE_URL") ?: ""
+
+        buildConfigField(
+            type = "String",
+            name = "CLIENT_ID",
+            value = clientKey
+        )
+        buildConfigField(
+            type = "String",
+            name = "BASE_URL",
+            value = baseUrl
+        )
+
     }
 
     buildTypes {
@@ -40,6 +61,7 @@ android {
     }
     buildFeatures {
         compose = true
+        buildConfig = true
     }
     composeOptions {
         kotlinCompilerExtensionVersion = "1.5.1"

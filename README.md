@@ -24,7 +24,7 @@
 </pre>
 <br />
         
-![image](https://drive.google.com/uc?export=view&id=1eiHSXYCxTtbvIJ4gPxIvZOOZXOuWD_Zp)
+![image](https://drive.google.com/uc?export=view&id=1Cpv5KFeoJo4Y5uzFeGxSRYwEmi_gGtr-)
 
 <br />
 
@@ -63,7 +63,7 @@
 </pre>
 <br />
 
-![image](https://drive.google.com/uc?export=view&id=1pIRYSAefMcKNoFB0BDU1DB0rGA8L17tk)
+![image](https://drive.google.com/uc?export=view&id=1vNr3FH2GT3FgMvKmySoJSEFxv9EXemNP)
 
 <br />
 

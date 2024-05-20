@@ -1,3 +1,10 @@
 <resources>
-    <string name="app_name">Tv Photos App</string>
+    <string name="app_name">Photos App</string>
+
+    <string name="search_text_placeholder">Search...</string>
+    <string name="text_trending">Trending Now</string>
+    <string name="text_loading_more">Loading More...</string>
+    <string name="text_no_search_results">No search results for </string>
+    <string name="text_search_results_for">Search Results for </string>
+
 </resources>

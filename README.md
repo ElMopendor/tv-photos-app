@@ -57,10 +57,10 @@
  <br />
  
  **[ X ] Alternate Search via Unsplash API:** <br />
-&emsp     [ X ] Post-search, use the Unsplash API to fetch and display results on a refreshed mainpage. <br />
-&emsp&emsp         [ ● ] *It happens when the user presses inside the logo.* <br />
-&emsp     [ X ] Update the page title to reflect the searched term. <br />
-&emsp     [ X ] Display "No search results for <search term>" if no results are found. <br />
+&ensp     [ X ] Post-search, use the Unsplash API to fetch and display results on a refreshed mainpage. <br />
+&ensp&ensp         [ ● ] *It happens when the user presses inside the logo.* <br />
+&ensp     [ X ] Update the page title to reflect the searched term. <br />
+&ensp     [ X ] Display "No search results for <search term>" if no results are found. <br />
  
  <br />
  

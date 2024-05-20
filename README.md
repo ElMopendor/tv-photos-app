@@ -95,4 +95,15 @@
 
 <br />
 
+
+**[ X ] To RUN the app:** <br />
+<pre>
+    Don´t forget to change the client_id in dev.properties
+</pre>
+<br />
+
+![image](https://drive.google.com/uc?export=view&id=16jyzqt668HucYq9pqveMCF-z9L41oN2S)
+
+<br />
+
 **That's all!! Thank you for whatching.**

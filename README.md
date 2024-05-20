@@ -68,9 +68,9 @@
  <br />
      
  **[ X ] Aditional Requirements:** <br />
-&emsp     [ X ] Utilize only the native Android framework, standard androidx libraries, and networking libraries like Retrofit. <br />
-&emsp     [ X ] Consider variable photo card sizes to accommodate different aspect ratios from Unsplash, or alternatively crop photos to fit a uniform card size. <br />
-&emsp     [ X ] Submit the final source code and an APK file for installation on an Android TV box. <br />
+\u00A0     [ X ] Utilize only the native Android framework, standard androidx libraries, and networking libraries like Retrofit. <br />
+\u00A0     [ X ] Consider variable photo card sizes to accommodate different aspect ratios from Unsplash, or alternatively crop photos to fit a uniform card size. <br />
+\u00A0     [ X ] Submit the final source code and an APK file for installation on an Android TV box. <br />
 &emsp&emsp         [ ● ] *It can be found in this* [drive link](https://drive.google.com/drive/folders/1GwqsLzS8_pBTgV-PgVMZDKdfuuUx6vFg?usp=drive_link)  <br />
 &emsp     [ X ] Quality and organization of the code will be a significant factor in the assessment. <br />
 &emsp&emsp         [ ● ] *I tried to do my best with a good folder structure* <br />

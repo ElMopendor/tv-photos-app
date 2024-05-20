@@ -22,7 +22,7 @@ import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
 
 @HiltAndroidApp
-class TvListApp : Application()
+class TvPhotosApp : Application()
 
 @InstallIn(SingletonComponent::class)
 @Module

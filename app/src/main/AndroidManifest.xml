@@ -10,10 +10,11 @@
         android:name="android.software.leanback"
         android:required="false" />
 
+
     <application
         android:name="TvPhotosApp"
         android:allowBackup="true"
-        android:banner="@mipmap/ic_launcher"
+        android:banner="@mipmap/ic_banner_foreground"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
@@ -30,7 +31,7 @@
         </activity>
         <activity
 
-            android:name="TvListApp"
+            android:name="TvPhotosApp"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

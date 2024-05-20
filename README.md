@@ -66,14 +66,15 @@
  
  ![image](https://drive.google.com/uc?export=view&id=19pSxVo4Q_mSkUjiCk9XRXHPcmVriICzt)
  <br />
-     
+<pre>     
  **[ X ] Aditional Requirements:** <br />
-\u00A0     [ X ] Utilize only the native Android framework, standard androidx libraries, and networking libraries like Retrofit. <br />
-\u00A0     [ X ] Consider variable photo card sizes to accommodate different aspect ratios from Unsplash, or alternatively crop photos to fit a uniform card size. <br />
-\u00A0     [ X ] Submit the final source code and an APK file for installation on an Android TV box. <br />
-&emsp&emsp         [ ● ] *It can be found in this* [drive link](https://drive.google.com/drive/folders/1GwqsLzS8_pBTgV-PgVMZDKdfuuUx6vFg?usp=drive_link)  <br />
-&emsp     [ X ] Quality and organization of the code will be a significant factor in the assessment. <br />
-&emsp&emsp         [ ● ] *I tried to do my best with a good folder structure* <br />
+    [ X ] Utilize only the native Android framework, standard androidx libraries, and networking libraries like Retrofit. <br />
+    [ X ] Consider variable photo card sizes to accommodate different aspect ratios from Unsplash, or alternatively crop photos to fit a uniform card size. <br />
+    [ X ] Submit the final source code and an APK file for installation on an Android TV box. <br />
+        [ ● ] *It can be found in this* [drive link](https://drive.google.com/drive/folders/1GwqsLzS8_pBTgV-PgVMZDKdfuuUx6vFg?usp=drive_link)  <br />
+    [ X ] Quality and organization of the code will be a significant factor in the assessment. <br />
+        [ ● ] *I tried to do my best with a good folder structure* <br />
+ <pre>
  <br />
  
  ![image](https://drive.google.com/uc?export=view&id=1w9PqnUUm1sAFM7ZcR9S-SmrOxvMByz4V)

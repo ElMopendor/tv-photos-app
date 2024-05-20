@@ -22,6 +22,7 @@
     [ X ] Utilize the following API for fetching random photos:Unsplash API - Get a Random Photo 
         (https://unsplash.com/documentation#get-a-random-photo)<br />
 </pre>
+<br />
         
 ![image](https://drive.google.com/uc?export=view&id=1eiHSXYCxTtbvIJ4gPxIvZOOZXOuWD_Zp)
 
@@ -45,6 +46,7 @@
 <br />
 
 ![image](https://drive.google.com/uc?export=view&id=1S99ArIo_g2PA4TOenTvdqKYwC2TACZNb)
+
 <br />
 
 **[ X ] Search Functionality**  <br />
@@ -62,6 +64,7 @@
 <br />
 
 ![image](https://drive.google.com/uc?export=view&id=1pIRYSAefMcKNoFB0BDU1DB0rGA8L17tk)
+
 <br />
 
 **[ X ] Alternate Search via Unsplash API:** <br />
@@ -74,6 +77,7 @@
 <br />
 
 ![image](https://drive.google.com/uc?export=view&id=19pSxVo4Q_mSkUjiCk9XRXHPcmVriICzt)
+
 <br />
     
 **[ X ] Aditional Requirements:** <br />

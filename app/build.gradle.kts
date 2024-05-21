@@ -14,7 +14,7 @@ android {
 
     defaultConfig {
         applicationId = "com.luisdev.tvphotosapp"
-        minSdk = 31
+        minSdk = 27
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"

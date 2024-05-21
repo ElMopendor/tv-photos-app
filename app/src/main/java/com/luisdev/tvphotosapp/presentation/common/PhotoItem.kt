@@ -47,7 +47,6 @@ fun PhotoItem(item: Photo){
         Card(
             modifier = Modifier.fillMaxSize(),
             onClick = {},
-            shape = CardDefaults.shape(shape = RoundedCornerShape(15.dp))
 
         ) {
             Box(

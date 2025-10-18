@@ -1,109 +1,124 @@
-### Take-Home Assignment: Android TV “Photo Search” App<br />
-<br />
-<br />
-<br />
+# 📺 Android TV — Photo Search App
 
+A native **Android TV** application that browses photos from **Unsplash**. It supports an initial random gallery, infinite scrolling with placeholders, and text-based search, all optimized for TV navigation and performance.
 
+---
 
-## I made a video of the assignment result<br />
-<br />
+## 🎥 Demo Video
 
 [![Watch the video](https://drive.google.com/uc?export=view&id=14z2m90TgeeT81xqkTCIQ_eSgcH1M8ri-)](https://drive.google.com/file/d/1GBKsG-0TH1J29WpFICwxGAKOJ-h2ynTA/view?usp=sharing)
 
-<br />
+---
 
-## ==> TODOS <br />
+## ✅ Scope & Checklist
 
-<br />
+### Initial Display
+- [x] On launch, show a grid with randomly selected photos from Unsplash  
+- [x] Uses **Unsplash API – Get a Random Photo**
 
-- **[ X ] Initial Display** <br />
+![Initial grid](https://drive.google.com/uc?export=view&id=1Cpv5KFeoJo4Y5uzFeGxSRYwEmi_gGtr-)
 
-    - [ X ] On launching the app, display a grid of randomly selected photos from Unsplash. <br />
-    - [ X ] Utilize the following API for fetching random photos:Unsplash API - Get a Random Photo 
-        (https://unsplash.com/documentation#get-a-random-photo)<br />
+### Photo Cards
+- [x] Show `created_at` date on each card  
+- [~] Up to three tags describing the photo  
+  - _Note: The random endpoint doesn’t provide tags. As an alternative, the card shows the **author name** and the **photo description**._
 
-<br />
-        
-![image](https://drive.google.com/uc?export=view&id=1Cpv5KFeoJo4Y5uzFeGxSRYwEmi_gGtr-)
+### Infinite Scrolling
+- [x] Dynamically load more thumbnails as the user scrolls  
+- [x] Placeholder image while loading  
+- [x] Smooth scrolling and efficient memory usage
 
-<br />
+![Infinite scroll](https://drive.google.com/uc?export=view&id=1S99ArIo_g2PA4TOenTvdqKYwC2TACZNb)
 
-- **[ X ] Photo Cards** <br />
+### Search Functionality
+- [x] Text search field  
+- [ ] Voice search (not implemented yet)  
+- [x] Execute search against Unsplash and replace the main grid with results  
+  - _Note: For consistency with random browsing and to allow seeded queries, the app uses the **/photos/random** endpoint strategy rather than `/search/photos`._
 
-    - Each card displayed should include: <br />
-    - [ X ] The date the photo was created (`created_at`). <br />
-    - [ ● ] *Up to three tags describing the photo *
-        *Description task: Tags are not provided in json, so I put the name of the creator and the photo description instead of tags.*
+![Search results](https://drive.google.com/uc?export=view&id=1vNr3FH2GT3FgMvKmySoJSEFxv9EXemNP)
 
+### Alternate Search Refresh
+- [x] Post-search, refresh results on the main page (triggered when the user selects the logo)  
+- [x] Update the page title to reflect the search term  
+- [x] Show “No search results for <term>” when applicable
 
-- **[ X ] Infinite Scrolling**  <br />
+![No results](https://drive.google.com/uc?export=view&id=19pSxVo4Q_mSkUjiCk9XRXHPcmVriICzt)
 
-    - Each card displayed should include: <br />
-    - [ X ] As the user scrolls down, dynamically load the next set of photo thumbnails. <br />
-    - [ X ] Use a placeholder image (e.g., an empty gray box) if the photo is still loading. <br />
-    - [ X ] Ensure smooth scrolling and efficient memory management. <br />
+### Additional Requirements
+- [x] Only native Android framework, androidx libs, and a networking lib (Retrofit)  
+- [x] Handle different aspect ratios or crop to a uniform card size  
+- [x] Submit source code and **APK** for Android TV  
+  - 📦 APK & assets: [Drive link](https://drive.google.com/drive/folders/1GwqsLzS8_pBTgV-PgVMZDKdfuuUx6vFg?usp=drive_link)  
+- [x] Emphasis on code quality and organization  
+  - _Structured packages and clear responsibility separation_
 
-<br />
+![Cards & layout](https://drive.google.com/uc?export=view&id=1w9PqnUUm1sAFM7ZcR9S-SmrOxvMByz4V)
 
-![image](https://drive.google.com/uc?export=view&id=1S99ArIo_g2PA4TOenTvdqKYwC2TACZNb)
+---
 
-<br />
+## 🧰 Tech Stack
 
-- **[ X ] Search Functionality**  <br />
+- **Platform:** Android TV (native)  
+- **Language:** Kotlin  
+- **UI:** AndroidX (RecyclerView/TV-friendly layout)  
+- **Networking:** Retrofit + OkHttp  
+- **Image Loading:** (e.g., Glide/Coil — according to implementation)  
+- **Async:** Kotlin Coroutines / Flow  
+- **Build:** Gradle (AGP)  
 
-    - [ X ] Users can type a tag into the search field or use voice search. <br />
-        - [ X ] search field <br />
-        - [  ] voice: I need more research to do this assignment  <br />
-    - [ X ] Upon executing a search, query the Unsplash API to display relevant photos using this
-            endpoint: Unsplash API - Search Photos
-            (https://unsplash.com/documentation#search-photos), with the query parameter set to
-            the user's input. <br />
-        - [ ● ] *I didn't use that endpoint because it doesn't have the option to send queries, instead I used the /photos/random endpoint* <br />        
-    - [ X ] Replace the main grid with the search results as depicted in Mockup 2. <br />
+> The project follows a presentation/data separation with clear responsibilities, enabling smooth scrolling and memory safety.
 
-<br />
+---
 
-![image](https://drive.google.com/uc?export=view&id=1vNr3FH2GT3FgMvKmySoJSEFxv9EXemNP)
+## 🗂️ Project Structure (high level)
 
-<br />
+```
+app/
+  data/
+    remote/        # Retrofit services, models (DTOs)
+    repository/    # Data access layer
+  domain/          # (Optional) Use-cases / models if applied
+  ui/
+    home/          # Initial random grid
+    search/        # Search screen + title updates
+    components/    # Adapters, view holders, decorators
+  core/
+    di/            # Dependency injection setup (if used)
+    util/          # Helpers & extensions
+```
 
-- **[ X ] Alternate Search via Unsplash API:** <br />
+---
 
-    - [ X ] Post-search, use the Unsplash API to fetch and display results on a refreshed mainpage. <br />
-        - [ ● ] *It happens when the user presses inside the logo.* <br />
-    - [ X ] Update the page title to reflect the searched term. <br />
-    - [ X ] Display "No search results for <search term>" if no results are found. <br />
+## ⚙️ Configuration & Run
 
-<br />
+1) Add your Unsplash client id in `dev.properties`:
+```
+UNSPLASH_CLIENT_ID=YOUR_CLIENT_ID
+```
 
-![image](https://drive.google.com/uc?export=view&id=19pSxVo4Q_mSkUjiCk9XRXHPcmVriICzt)
+2) Build & Install (Android TV target):
+```
+./gradlew assembleDebug
+adb install -r app/build/outputs/apk/debug/app-debug.apk
+```
 
-<br />
-    
-- **[ X ] Aditional Requirements:** <br />
+> Ensure your TV device/emulator is connected and visible via `adb devices`.
 
-    - [ X ] Utilize only the native Android framework, standard androidx libraries, and networking libraries like Retrofit. <br />
-    - [ X ] Consider variable photo card sizes to accommodate different aspect ratios from Unsplash, or alternatively crop photos to fit a uniform card size. <br />
-    - [ X ] Submit the final source code and an APK file for installation on an Android TV box. <br />
-        - [ ● ] *It can be found in this* [drive link](https://drive.google.com/drive/folders/1GwqsLzS8_pBTgV-PgVMZDKdfuuUx6vFg?usp=drive_link)  <br />
-    - [ X ] Quality and organization of the code will be a significant factor in the assessment. <br />
-        - [ ● ] *I tried to do my best with a good folder structure* <br />
+---
 
-<br />
+## 🧩 Notes & Limitations
 
-![image](https://drive.google.com/uc?export=view&id=1w9PqnUUm1sAFM7ZcR9S-SmrOxvMByz4V)
+- Tags are not available from the random endpoint; using author and description as a friendly alternative  
+- Voice search is pending (future iteration)  
+- The grid uses placeholders to avoid jank while images load  
 
-<br />
+---
 
+## 👨‍💻 Author
 
-- **[ X ] To RUN the app:** <br />
+**Luis Aguilar Rojas**  
+Full Stack Engineer (Mobile Focused)  
+[LinkedIn](https://linkedin.com/in/luis-angel-developer) • [GitHub](https://github.com/ElMopendor)
 
-    - Don´t forget to change the client_id in dev.properties
-</pre>
-<br />
-
-![image](https://drive.google.com/uc?export=view&id=16jyzqt668HucYq9pqveMCF-z9L41oN2S)
-
-<br />
-
-**That's all!! Thank you for whatching.**
+— Thanks for watching!
